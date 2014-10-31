@@ -8,12 +8,12 @@ public static  int doubled(int n)
         return n * 2;
 }
 
-public static char[][] ArrayInput(char x)
+public static char[][] MakeArray()
 {
 	char[][] tic = new char[3][3];
      for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++){
-                tic[i][j] = x;
+                tic[i][j] = '-';
         }
         }
         return tic;

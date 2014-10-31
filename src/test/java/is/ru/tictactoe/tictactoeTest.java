@@ -23,7 +23,7 @@ public class tictactoeTest {
                         array[i][j] = '-';
                   }
                   }
-		assertArrayEquals(array, Game.ArrayInput('-'));
+		assertArrayEquals(array, Game.MakeArray());
 	
         }
 }
