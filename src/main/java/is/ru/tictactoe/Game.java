@@ -2,7 +2,18 @@ package is.ru.tictactoe;
 import java.util.Scanner;
 
 public class Game {
-
+	
+	public static char[][] tic;	
+	
+	Game(){
+         tic = new char[3][3];
+         for(int i = 0; i < 3; i++){
+           for(int j = 0; j < 3; j++){
+                tic[i][j] = '-';
+          }
+          }
+        }
+	
 public static  int doubled(int n)
 {
         return n * 2;
@@ -10,7 +21,7 @@ public static  int doubled(int n)
 
 public static char[][] MakeArray()
 {
-	char[][] tic = new char[3][3];
+     tic = new char[3][3];
      for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++){
                 tic[i][j] = '-';
