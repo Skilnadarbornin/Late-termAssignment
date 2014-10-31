@@ -76,7 +76,6 @@ public static void main(String[] args) {
 	name = in.nextLine();
 	player2 player2 = new player2(name);
 	System.out.print("Player 2 = " + player2.name );
->>>>>>> 5b283fa707506ca57b1c873f63c50e60d27f72a3
 
 	System.out.println();
 	game.PrintBoard(tic);
