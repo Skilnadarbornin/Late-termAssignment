@@ -30,6 +30,13 @@ public static char[][] MakeArray()
         return tic;
 }
 
+public static char MakeMove(int col, int row, char move)
+{
+	Game game = new Game();
+	game.tic[col][row] = move;
+	return tic[col][row];
+}
+
 public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -38,4 +45,6 @@ public static void main(String[] args) {
         System.out.println(doubled(i));
 
 }
+
+
 }

@@ -36,5 +36,11 @@ public class tictactoeTest {
 		Game game = new Game();
 		assertArrayEquals(array, game.tic);
 	}
+	@Test
+	public void testMakeMove(){
+		Game game = new Game();
+		game.tic[2][2] = 'X';
+		assertEquals(game.tic[2][2], game.MakeMove(2, 2, 'X'));
+	}
 
 }
