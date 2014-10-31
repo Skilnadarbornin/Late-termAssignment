@@ -7,14 +7,12 @@
  * user guide available at http://gradle.org/docs/2.1/userguide/tutorial_java_projects.html
  */
 
-// Apply the java plugin to add support for Java
-apply plugin: 'java'
+// Apply '
 
-jar {
-	manifest {
-		attributes 'Main-Class': 'is.ru.tictactoe'
-		}
-}
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "is.ru.tictactoe.Game"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -34,4 +32,7 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.11'
 }
-task stage { dependsOn installApp }
+
+task stage { 
+	dependsOn installApp 
+}
