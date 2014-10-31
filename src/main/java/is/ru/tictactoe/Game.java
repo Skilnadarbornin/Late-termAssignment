@@ -13,6 +13,7 @@ public class Game {
           }
           }
         }
+
 	
 public static  int doubled(int n)
 {
@@ -31,8 +32,7 @@ public static char[][] MakeArray()
 }
 
 public static char MakeMove(int col, int row, char move)
-{
-	Game game = new Game();
+{	Game game = new Game();
 	game.tic[col][row] = move;
 	return tic[col][row];
 }

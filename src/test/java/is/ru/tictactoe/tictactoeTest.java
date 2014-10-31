@@ -1,10 +1,11 @@
-
 package is.ru.tictactoe;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class tictactoeTest {
+	
+	Game game = new Game();
 
         public static void main(String args[]) {
         org.junit.runner.JUnitCore.main("is.ru.tictactoe.tictactoeTest");
@@ -33,14 +34,16 @@ public class tictactoeTest {
                         array[i][j] = '-';
                   }
          	}
-		Game game = new Game();
 		assertArrayEquals(array, game.tic);
 	}
 	@Test
-	public void testMakeMove(){
-		Game game = new Game();
-		game.tic[2][2] = 'X';
-		assertEquals(game.tic[2][2], game.MakeMove(2, 2, 'X'));
+	public void testMakeMoveX(){
+		assertEquals('X', game.MakeMove(2, 2, 'X'));
 	}
+	 @Test
+        public void testMakeMoveO(){
+                assertEquals('O', game.MakeMove(2, 2, 'O'));
+        }
+
 
 }
