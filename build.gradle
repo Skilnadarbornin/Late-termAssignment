@@ -11,6 +11,11 @@
 
 apply plugin: 'java'
 apply plugin: 'application'
+jar {
+    manifest {
+        attributes 'Main-Class': 'is.ru.tictactoe.Game'
+    }
+}
 
 mainClassName = "is.ru.tictactoe.Game"
 
