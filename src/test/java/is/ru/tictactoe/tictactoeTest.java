@@ -49,6 +49,10 @@ public class tictactoeTest {
 	public void WrongNumbers(){
 		assertFalse(game.WrongNumbers(2,2));
 	}
-
+	
+	@Test
+	public void WrongNumbersagain(){
+		assertTrue(game.WrongNumbers(23,23));
+	}
 
 }
