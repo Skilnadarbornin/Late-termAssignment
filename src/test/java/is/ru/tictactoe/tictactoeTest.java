@@ -44,6 +44,11 @@ public class tictactoeTest {
         public void testMakeMoveO(){
                 assertEquals('O', game.MakeMove(2, 2, 'O'));
         }
+	
+	@Test
+	public void WrongNumbers(){
+		assertFalse(game.WrongNumbers(2,2));
+	}
 
 
 }

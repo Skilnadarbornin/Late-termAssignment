@@ -37,6 +37,11 @@ public static char MakeMove(int col, int row, char move)
 	return tic[col][row];
 }
 
+public static boolean WrongNumbers(int x, int y)
+{
+	return (x > 2 || x < 0 || y > 2 || y < 0);
+}
+
 public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
