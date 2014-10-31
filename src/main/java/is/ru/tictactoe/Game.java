@@ -48,7 +48,6 @@ public static void main(String[] args) {
         String ans = sc.nextLine();
         int i = Integer.parseInt(ans);
         System.out.println(doubled(i));
-
 }
 
 
