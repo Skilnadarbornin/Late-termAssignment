@@ -11,11 +11,6 @@ public class tictactoeTest {
         org.junit.runner.JUnitCore.main("is.ru.tictactoe.tictactoeTest");
         }
 
-        @Test
-        public void testDoubled() {
-                assertEquals(8, Game.doubled(4));
-        }
-	
 	@Test
         public void testArrayInput(){
 		char[][] array = new char[3][3];
@@ -54,5 +49,4 @@ public class tictactoeTest {
 	public void WrongNumbersagain(){
 		assertTrue(game.WrongNumbers(23,23));
 	}
-
 }
