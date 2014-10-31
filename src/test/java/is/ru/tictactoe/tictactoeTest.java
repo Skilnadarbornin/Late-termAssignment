@@ -1,7 +1,7 @@
 
 package is.ru.tictactoe;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class tictactoeTest {
@@ -13,5 +13,17 @@ public class tictactoeTest {
         @Test
         public void testDoubled() {
                 assertEquals(8, Game.doubled(4));
+        }
+	
+	@Test
+        public void testArrayInput(){
+		char[][] array = new char[3][3];
+                for(int i = 0; i < 3; i++){
+                  for(int j = 0; j < 3; j++){
+                        array[i][j] = '-';
+                  }
+                  }
+		assertArrayEquals(array, Game.ArrayInput('-'));
+	
         }
 }
