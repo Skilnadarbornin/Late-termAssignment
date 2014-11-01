@@ -56,12 +56,6 @@ public void PrintBoard(char[][] tic)
 
 public static void main(String[] args) {
 
-       /* Scanner sc = new Scanner(System.in);
-        String ans = sc.nextLine();
-        int i = Integer.parseInt(ans);
-        System.out.println(doubled(i));
-	*/
-
 	Game game = new Game();
 	Scanner in = new Scanner(System.in);	
 	System.out.print("Select name for Player 1: ");
