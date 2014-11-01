@@ -15,17 +15,6 @@ public class Game {
           	}
         }
 
-public static char[][] MakeArray()
-{
-     tic = new char[3][3];
-     for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
-                tic[i][j] = '-';
-        }
-        }
-        return tic;
-}
-
 public static void MakeMove(char[][] array,int x, int y, char move)
 {	
 	Scanner in = new Scanner(System.in);
