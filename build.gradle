@@ -13,11 +13,11 @@ apply plugin: 'java'
 apply plugin: 'application'
 jar {
     manifest {
-        attributes 'Main-Class': 'is.ru.tictactoe.Game'
+        attributes 'Main-Class': 'is.ru.tictactoe.GameWeb'
     }
 }
 
-mainClassName = "is.ru.tictactoe.Game"
+mainClassName = "is.ru.tictactoe.GameWeb"
 
 // In this section you declare where to find the dependencies of your project
    repositories {

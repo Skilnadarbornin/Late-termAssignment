@@ -15,11 +15,11 @@ public class Game {
           	}
         }
 
-public static void MakeMove(char[][] array,int x, int y, char move)
+public static void MakeMove(int x, int y, char move)
 {	
 	Scanner in = new Scanner(System.in);
 
-	while(WrongNumbers(x, y) || IllegalMove(array,x, y))
+	while(WrongNumbers(x, y) || IllegalMove(x, y))
 	{
 		if(WrongNumbers(x, y))
 		{
@@ -34,7 +34,7 @@ public static void MakeMove(char[][] array,int x, int y, char move)
 			y = in.nextInt();
 		}
 	}
-	array[x][y] = move;
+	tic[x][y] = move;
 }
 
 public static boolean WrongNumbers(int x, int y)
@@ -42,12 +42,12 @@ public static boolean WrongNumbers(int x, int y)
 	return (x > 2 || x < 0 || y > 2 || y < 0);
 }
 
-public static boolean IllegalMove(char[][] arr, int x, int y)
+public static boolean IllegalMove(int x, int y)
 {
-	return (arr[x][y] != '-');
+	return (tic[x][y] != '-');
 }
 
-public void PrintBoard(char[][] tic)
+public void PrintBoard()
 {
 	int count = 0;
 	System.out.println();
@@ -63,36 +63,38 @@ public void PrintBoard(char[][] tic)
 		}
 		System.out.println();
 }
-public boolean Winner(char[][] arr, char move)
+public boolean Winner(char move)
 {
 	for(int i = 0; i < 3; i++)
 	{
-		if(arr[i][0] == move && arr[i][1] == move && arr[i][2] == move)
+		if(tic[i][0] == move && tic[i][1] == move && tic[i][2] == move)
 		{return true;}
 	}
 	for(int k = 0; k < 3; k++)
 	{
-		if(arr[0][k] == move && arr[1][k] == move && arr[2][k] == move)
+		if(tic[0][k] == move && tic[1][k] == move && tic[2][k] == move)
 		{return true;}
 	}
-	if(arr[0][0] == move && arr[1][1] == move && arr[2][2] == move)
+	if(tic[0][0] == move && tic[1][1] == move && tic[2][2] == move)
 	{return true;}
-	if(arr[2][0] == move && arr[1][1] == move && arr[0][2] == move)
+	if(tic[2][0] == move && tic[1][1] == move && tic[0][2] == move)
 	{return true;}
 	
 	return false;
 }
 
+public static int counter = 0;
 public void PlayerMove(String name, char move)
 {
+	counter++;
 	Scanner in = new Scanner(System.in);
 
 	System.out.println(name + " make a move, you can choose columns[0-2 & rows[0-2]");
 	int x = in.nextInt();
 	int y = in.nextInt();
-	MakeMove(tic,x,y,move);
-	PrintBoard(tic);
-	if(Winner(tic,move))
+	MakeMove(x,y,move);
+	PrintBoard();
+	if(Winner(move))
 	{
 		System.out.println(name + " wins!");
 		return;
@@ -120,16 +122,16 @@ public static void main(String[] args) {
 	System.out.print("Player 2 = " + player2.name );
 
 	System.out.println();
-	game.PrintBoard(tic);
-	int count = 0;
+	game.PrintBoard();
+	//int count = 0;
 
-	while(count <= 8)
+	while(counter <= 8)
 	{
-		if(count % 2 == 0)
+		if(counter % 2 == 0)
 		{
 			game.PlayerMove(player1.name, player1.move);
-			count++;
-			if(game.Winner(tic, player1.move))
+			//count++;
+			if(game.Winner(player1.move))
 			{
 				return;
 			}
@@ -137,8 +139,8 @@ public static void main(String[] args) {
 		else
 		{
 			game.PlayerMove(player2.name, player2.move);
-			count++;
-			if(game.Winner(tic, player2.move))
+			//count++;
+			if(game.Winner(player2.move))
 			{
 				return;
 			}
