@@ -132,5 +132,29 @@ public static void main(String[] args) {
 
 	System.out.println();
 	game.PrintBoard(tic);
+	int count = 0;
+
+	while(count <= 8)
+	{
+		if(count % 2 == 0)
+		{
+			game.PlayerMove(player1.name, player1.move);
+			count++;
+			if(game.Winner(tic, player1.move))
+			{
+				return;
+			}
+		}
+		else
+		{
+			game.PlayerMove(player2.name, player2.move);
+			count++;
+			if(game.Winner(tic, player2.move))
+			{
+				return;
+			}
+		}
+	}
+	System.out.println("DRAW! What a bummer.");
 }
 }
