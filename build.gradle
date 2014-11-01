@@ -1,16 +1,12 @@
 
 apply plugin: 'java'
 apply plugin: 'application'
+
 jar {
     manifest {
         attributes 'Main-Class': 'is.ru.tictactoe.Game'
     }
 }
-
-// In this section you declare where to find the dependencies of your project
-   repositories {
-    // Use 'jcenter' for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
 
 repositories{
 	jcenter()
@@ -33,7 +29,7 @@ dependencies {
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 }
 
-	mainClassName = "is.ru.tictactoe.GameWeb"
+mainClassName = "is.ru.tictactoe.GameWeb"
 
 task selenium(type: Test, dependsOn: installApp) {
     testClassesDir = sourceSets.selenium.output.classesDir
