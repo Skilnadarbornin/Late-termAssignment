@@ -11,20 +11,7 @@ public class tictactoeTest {
         org.junit.runner.JUnitCore.main("is.ru.tictactoe.tictactoeTest");
         }
 
-	@Test
-        public void testArrayInput(){
-		char[][] rightArray = new char[3][3];
-		char[][] wrongArray = new char[3][3];
-                for(int i = 0; i < 3; i++){
-                  for(int j = 0; j < 3; j++){
-                        rightArray[i][j] = '-';
-			wrongArray[i][j] = '*';
-			
-                  }
-                  }
-		assertArrayEquals(rightArray, Game.MakeArray());
-		assertNotEquals(wrongArray, Game.MakeArray());
-        }
+        
 	@Test
 	public void testConstructor(){
 		char[][] rightArray = new char[3][3];
@@ -38,12 +25,6 @@ public class tictactoeTest {
 		assertArrayEquals(rightArray, game.tic);
 		assertNotEquals(wrongArray, game.tic);
 	}
-	/*
-	@Test
-	public void testMakeMoveX(){
-		assertEquals('X', game.MakeMove(2, 2, 'X'));
-		assertEquals('O', game.MakeMove(2, 2, 'O'));
-	}*/
 	
 	@Test
 	public void WrongNumbers(){
