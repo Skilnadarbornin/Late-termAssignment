@@ -1,7 +1,7 @@
-package is.ru.tictactoe
+package is.ru.tictactoe;
 
-import spark.*
-import static spark.Spark.*
+import spark.*;
+import static spark.Spark.*;
 import spark.servlet.SparkApplication;
 
 public class TicWebb implements SparkApplication {
@@ -14,4 +14,4 @@ public class TicWebb implements SparkApplication {
         }
        // chuckweb.init();
     }
-
+}
