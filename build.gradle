@@ -17,7 +17,6 @@ jar {
     }
 }
 
-mainClassName = "is.ru.tictactoe.Game"
 
 // In this section you declare where to find the dependencies of your project
    repositories {
@@ -47,6 +46,8 @@ dependencies {
     seleniumXvfbCompile 'junit:junit:4.11'
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 }
+
+MainClassName = "is.ru.tictactoe.GameWeb"
 
 task selenium(type: Test, dependsOn: installApp) {
     testClassesDir = sourceSets.selenium.output.classesDir
