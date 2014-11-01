@@ -27,7 +27,8 @@ public static char[][] MakeArray()
 }
 
 public static char MakeMove(int col, int row, char move)
-{	Game game = new Game();
+{	
+	Game game = new Game();
 	game.tic[col][row] = move;
 	return tic[col][row];
 }
@@ -56,19 +57,13 @@ public void PrintBoard(char[][] tic)
 
 public static void main(String[] args) {
 
-<<<<<<< HEAD
-=======
        /* Scanner sc = new Scanner(System.in);
         String ans = sc.nextLine();
         int i = Integer.parseInt(ans);
         System.out.println(doubled(i));
-<<<<<<< HEAD
 }
-
-=======
 	*/
 
->>>>>>> 2c9db7d2c71ba657e278e63780aee744a95279a9
 	Game game = new Game();
 	Scanner in = new Scanner(System.in);	
 	System.out.print("Select name for Player 1: ");
