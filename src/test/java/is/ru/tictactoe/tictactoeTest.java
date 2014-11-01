@@ -31,11 +31,12 @@ public class tictactoeTest {
          	}
 		assertArrayEquals(array, game.tic);
 	}
+	/*
 	@Test
 	public void testMakeMoveX(){
 		assertEquals('X', game.MakeMove(2, 2, 'X'));
 		assertEquals('O', game.MakeMove(2, 2, 'O'));
-	}
+	}*/
 	
 	@Test
 	public void WrongNumbers(){

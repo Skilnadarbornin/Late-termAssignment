@@ -26,11 +26,26 @@ public static char[][] MakeArray()
         return tic;
 }
 
-public static char MakeMove(int col, int row, char move)
+public static char MakeMove(char[][] array,int x, int y, char move)
 {	
-	Game game = new Game();
-	game.tic[col][row] = move;
-	return tic[col][row];
+	Scanner in = new Scanner(System.in);
+
+	while(WrongNumbers(x, y) || IllegalMove(array,x, y))
+	{
+		if(WrongNumbers(x, y))
+		{
+			System.out.println("You have to choose integers between 0 and 2, please try again.");
+			x = in.nextInt();
+			y = in.nextInt();
+		}
+		else
+		{
+			System.out.println("You can't make that move, please try again");
+			x = in.nextInt();
+			y = in.nextInt();
+		}
+	}
+	return array[x][y];
 }
 
 public static boolean WrongNumbers(int x, int y)
