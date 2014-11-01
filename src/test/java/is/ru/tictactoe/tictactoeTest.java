@@ -53,4 +53,13 @@ public class tictactoeTest {
 		assertTrue(game.WrongNumbers(-4, - 44));
 		assertTrue(game.WrongNumbers(0, -23));
 	}
+	
+	@Test
+	public void IllegalMove(){
+		char[][] array = new char[3][3];
+		array[1][2] = '-';
+		array[0][2] = 2;
+		assertFalse(game.IllegalMove(array,1,2));
+		assertTrue(game.IllegalMove(array,0,2));
+	}
 }

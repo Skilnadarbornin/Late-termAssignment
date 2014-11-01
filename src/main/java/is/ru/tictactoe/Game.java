@@ -38,6 +38,11 @@ public static boolean WrongNumbers(int x, int y)
 	return (x > 2 || x < 0 || y > 2 || y < 0);
 }
 
+public static boolean IllegalMove(char[][] arr, int x, int y)
+{
+	return (arr[x][y] != '-');
+}
+
 public void PrintBoard(char[][] tic)
 {
 	int count = 0;
