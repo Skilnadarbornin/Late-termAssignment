@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="is.ru.tictactoe.tictactoeTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2014-11-01T00:03:43" hostname="i-447fa101" time="0.014">
+=======
+<testsuite name="is.ru.tictactoe.tictactoeTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2014-10-31T23:44:01" hostname="i-447fa101" time="0.043">
+>>>>>>> 2c9db7d2c71ba657e278e63780aee744a95279a9
   <properties/>
-  <testcase name="testArrayInput" classname="is.ru.tictactoe.tictactoeTest" time="0.003"/>
+  <testcase name="testArrayInput" classname="is.ru.tictactoe.tictactoeTest" time="0.016"/>
   <testcase name="WrongNumbers" classname="is.ru.tictactoe.tictactoeTest" time="0.0"/>
   <testcase name="WrongNumbersagain" classname="is.ru.tictactoe.tictactoeTest" time="0.001"/>
+<<<<<<< HEAD
   <testcase name="testMakeMoveO" classname="is.ru.tictactoe.tictactoeTest" time="0.0"/>
+=======
+  <testcase name="testMakeMoveO" classname="is.ru.tictactoe.tictactoeTest" time="0.001"/>
+>>>>>>> 2c9db7d2c71ba657e278e63780aee744a95279a9
   <testcase name="testMakeMoveX" classname="is.ru.tictactoe.tictactoeTest" time="0.0"/>
-  <testcase name="testConstructor" classname="is.ru.tictactoe.tictactoeTest" time="0.0"/>
+  <testcase name="testConstructor" classname="is.ru.tictactoe.tictactoeTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
