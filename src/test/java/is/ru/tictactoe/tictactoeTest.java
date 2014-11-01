@@ -44,10 +44,6 @@ public class tictactoeTest {
 		assertFalse(game.WrongNumbers(1,1));
 		assertFalse(game.WrongNumbers(0,0));
 		assertFalse(game.WrongNumbers(0,2));
-	}
-	
-	@Test
-	public void WrongNumbersagain(){
 		assertTrue(game.WrongNumbers(23,23));
 		assertTrue(game.WrongNumbers(1,12));
 		assertTrue(game.WrongNumbers(-10, 77));
@@ -63,4 +59,20 @@ public class tictactoeTest {
 		assertFalse(game.IllegalMove(array,1,2));
 		assertTrue(game.IllegalMove(array,0,2));
 	}
+
+	@Test
+	public void testPlayerConstructors(){
+		player1 Player1 = new player1("Petur");
+		player2 Player2 = new player2("Atli");
+		
+		assertEquals("Petur", Player1.name);
+		assertEquals("Atli", Player2.name);
+		assertNotEquals("siggi", Player1.name);
+		assertNotEquals("Jon", Player2.name);
+		assertEquals('X', Player1.move);
+		assertEquals('O', Player2.move);
+		assertNotEquals('x', Player1.move);
+		assertNotEquals('o', Player2.move);
+	}
+
 }
