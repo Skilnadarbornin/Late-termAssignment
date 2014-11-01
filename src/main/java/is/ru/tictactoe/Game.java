@@ -15,18 +15,7 @@ public class Game {
           	}
         }
 
-public static char[][] MakeArray()
-{
-     tic = new char[3][3];
-     for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
-                tic[i][j] = '-';
-        }
-        }
-        return tic;
-}
-
-public static char MakeMove(char[][] array,int x, int y, char move)
+public static void MakeMove(char[][] array,int x, int y, char move)
 {	
 	Scanner in = new Scanner(System.in);
 
@@ -45,7 +34,7 @@ public static char MakeMove(char[][] array,int x, int y, char move)
 			y = in.nextInt();
 		}
 	}
-	return array[x][y] = move;
+	array[x][y] = move;
 }
 
 public static boolean WrongNumbers(int x, int y)
