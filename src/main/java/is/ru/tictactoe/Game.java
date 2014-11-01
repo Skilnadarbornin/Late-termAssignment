@@ -45,7 +45,7 @@ public static char MakeMove(char[][] array,int x, int y, char move)
 			y = in.nextInt();
 		}
 	}
-	return array[x][y];
+	return array[x][y] = move;
 }
 
 public static boolean WrongNumbers(int x, int y)
@@ -73,6 +73,41 @@ public void PrintBoard(char[][] tic)
 			count++;
 		}
 		System.out.println();
+}
+public boolean Winner(char[][] arr, char move)
+{
+	for(int i = 0; i < 3; i++)
+	{
+		if(arr[i][0] == move && arr[i][1] == move && arr[i][2] == move)
+		{return true;}
+	}
+	for(int k = 0; k < 3; k++)
+	{
+		if(arr[0][k] == move && arr[1][k] == move && arr[2][k] == move)
+		{return true;}
+	}
+	if(arr[0][0] == move && arr[1][1] == move && arr[2][2] == move)
+	{return true;}
+	if(arr[2][0] == move && arr[1][1] == move && arr[0][2] == move)
+	{return true;}
+	
+	return false;
+}
+
+public void PlayerMove(String name, char move)
+{
+	Scanner in = new Scanner(System.in);
+
+	System.out.println(name + " make a move, you can choose columns[0-2 & rows[0-2]");
+	int x = in.nextInt();
+	int y = in.nextInt();
+	MakeMove(tic,x,y,move);
+	PrintBoard(tic);
+	if(Winner(tic,move))
+	{
+		System.out.println(name + " wins!");
+		return;
+	}
 }
 
 public static void main(String[] args) {
