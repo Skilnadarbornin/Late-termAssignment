@@ -74,5 +74,28 @@ public class tictactoeTest {
 		assertNotEquals('x', Player1.move);
 		assertNotEquals('o', Player2.move);
 	}
+	
+	 @Test
+        public void isWinner(){
+
+                player1 Player1 = new player1("Gunni");
+                player2 Player2 = new player2("Jon");
+                char[][] player1isWinner = new char[3][3];
+                char[][] player2isWinner = new char[3][3];
+                char[][] notWinner = new char[3][3];
+                for(int i = 0; i < 3; i++){
+                  for(int j = 0; j < 3; j++){
+                        player1isWinner[i][j] = 'X';
+                        player2isWinner[i][j] = 'O';
+                        notWinner[i][j] = 'L';}
+                }
+
+                assertTrue(game.Winner(player1isWinner, Player1.move));
+                assertFalse(game.Winner(notWinner, Player1.move));
+                assertFalse(game.Winner(notWinner, Player2.move));
+                assertTrue(game.Winner(player2isWinner, Player2.move));
+                assertFalse(game.Winner(player1isWinner, Player2.move));
+                assertFalse(game.Winner(player2isWinner, Player1.move));
+       }
 
 }
