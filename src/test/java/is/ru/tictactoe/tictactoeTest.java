@@ -13,23 +13,30 @@ public class tictactoeTest {
 
 	@Test
         public void testArrayInput(){
-		char[][] array = new char[3][3];
+		char[][] rightArray = new char[3][3];
+		char[][] wrongArray = new char[3][3];
                 for(int i = 0; i < 3; i++){
                   for(int j = 0; j < 3; j++){
-                        array[i][j] = '-';
+                        rightArray[i][j] = '-';
+			wrongArray[i][j] = '*';
+			
                   }
                   }
-		assertArrayEquals(array, Game.MakeArray());
+		assertArrayEquals(rightArray, Game.MakeArray());
+		assertNotEquals(wrongArray, Game.MakeArray());
         }
 	@Test
 	public void testConstructor(){
-		char[][] array = new char[3][3];
+		char[][] rightArray = new char[3][3];
+		char[][] wrongArray = new char[3][3];
                 for(int i = 0; i < 3; i++){
                   for(int j = 0; j < 3; j++){
-                        array[i][j] = '-';
+                        rightArray[i][j] = '-';
+			wrongArray[i][j] = '%';
                   }
          	}
-		assertArrayEquals(array, game.tic);
+		assertArrayEquals(rightArray, game.tic);
+		assertNotEquals(wrongArray, game.tic);
 	}
 	/*
 	@Test
