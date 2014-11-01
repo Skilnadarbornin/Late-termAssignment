@@ -48,8 +48,6 @@ dependencies {
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 }
 
-mainClassName = "is.ru.sparkit.ChuckWeb"
-
 task selenium(type: Test, dependsOn: installApp) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
