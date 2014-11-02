@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/Late-termAssignment/build/libs
+java -jar Late-termAssignment.jar
