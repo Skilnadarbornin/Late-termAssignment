@@ -1,9 +1,7 @@
 package is.ru.tictactoe;
 
-<<<<<<< HEAD
+
 import javax.print.DocFlavor;
-=======
->>>>>>> 1fb72ff2530d33877cbb8b9187948f2cbf9d89ff
 import spark.*;
 import static spark.Spark.*;
 import spark.servlet.SparkApplication;
@@ -11,16 +9,13 @@ import spark.servlet.SparkApplication;
 public class GameWeb implements SparkApplication {
     public static void main(String[] args){
         staticFileLocation("/public");
-<<<<<<< HEAD
+
         SparkApplication GameWeb = new GameWeb();
-=======
-        SparkApplication gameweb = new GameWeb();
->>>>>>> 1fb72ff2530d33877cbb8b9187948f2cbf9d89ff
+
         String port = System.getenv("PORT");
         if (port != null) {
             setPort(Integer.valueOf(port));
         }
-<<<<<<< HEAD
         GameWeb.init(); 
     }
 
@@ -82,12 +77,5 @@ public class GameWeb implements SparkApplication {
                 return response;
 	    }	
         });
-=======
-        gameweb.init(); 
-    }
-
-    public void init(){
-        
->>>>>>> 1fb72ff2530d33877cbb8b9187948f2cbf9d89ff
-    }
+     }
 }
