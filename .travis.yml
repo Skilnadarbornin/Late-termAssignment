@@ -4,6 +4,8 @@ jdk:
   - openjdk7
   - oraclejdk7
 
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+
 script:
   - ./gradlew check
-  - ./gradlew seleniumXvfb
