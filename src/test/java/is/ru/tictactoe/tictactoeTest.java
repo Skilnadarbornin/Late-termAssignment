@@ -22,7 +22,7 @@ public class tictactoeTest {
                   }
          	}
 		assertArrayEquals(rightArray, game.tic);
-		assertNotEquals(wrongArray, game.tic);
+		assertEquals(wrongArray, game.tic);
 	}
 	
 	@Test
