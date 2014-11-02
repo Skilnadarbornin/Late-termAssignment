@@ -2,6 +2,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'pmd'
+apply plugin: 'jacoco'
 
 jar {
     manifest {

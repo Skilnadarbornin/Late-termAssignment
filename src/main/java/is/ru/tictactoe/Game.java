@@ -39,12 +39,12 @@ public static void MakeMove(char[][] tic, int x, int y, char move)
 
 public static boolean WrongNumbers(int x, int y)
 {
-	return (x > 2 || x < 0 || y > 2 || y < 0);
+	return x > 2 || x < 0 || y > 2 || y < 0;
 }
 
 public static boolean IllegalMove(char[][] tic, int x, int y)
 {
-	return (tic[x][y] != '-');
+	return tic[x][y] != '-';
 }
 
 public void PrintBoard(char[][] tic)
