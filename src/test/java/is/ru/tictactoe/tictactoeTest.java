@@ -10,8 +10,7 @@ public class tictactoeTest {
         public static void main(String args[]) {
         org.junit.runner.JUnitCore.main("is.ru.tictactoe.tictactoeTest");
         }
-
-/*        
+        
 	@Test
 	public void testConstructor(){
 		char[][] rightArray = new char[3][3];
@@ -85,5 +84,4 @@ public class tictactoeTest {
                 assertFalse(game.Winner(player1isWinner, Player2.move));
                 assertFalse(game.Winner(player2isWinner, Player1.move));
        }
-*/
 }

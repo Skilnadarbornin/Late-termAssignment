@@ -15,11 +15,11 @@ public class Game {
           	}
         }
 
-public static void MakeMove(int x, int y, char move)
+public static void MakeMove(char[][] tic, int x, int y, char move)
 {	
 	Scanner in = new Scanner(System.in);
 
-	while(WrongNumbers(x, y) || IllegalMove(x, y))
+	while(WrongNumbers(x, y) || IllegalMove(tic, x, y))
 	{
 		if(WrongNumbers(x, y))
 		{
@@ -42,12 +42,12 @@ public static boolean WrongNumbers(int x, int y)
 	return (x > 2 || x < 0 || y > 2 || y < 0);
 }
 
-public static boolean IllegalMove(int x, int y)
+public static boolean IllegalMove(char[][] tic, int x, int y)
 {
 	return (tic[x][y] != '-');
 }
 
-public void PrintBoard()
+public void PrintBoard(char[][] tic)
 {
 	int count = 0;
 	System.out.println();
@@ -63,7 +63,7 @@ public void PrintBoard()
 		}
 		System.out.println();
 }
-public boolean Winner(char move)
+public boolean Winner(char[][] tic, char move)
 {
 	for(int i = 0; i < 3; i++)
 	{
@@ -92,9 +92,9 @@ public void PlayerMove(String name, char move)
 	System.out.println(name + " make a move, you can choose columns[0-2 & rows[0-2]");
 	int x = in.nextInt();
 	int y = in.nextInt();
-	MakeMove(x,y,move);
-	PrintBoard();
-	if(Winner(move))
+	MakeMove(tic, x,y,move);
+	PrintBoard(tic);
+	if(Winner(tic, move))
 	{
 		System.out.println(name + " wins!");
 		return;
@@ -102,13 +102,6 @@ public void PlayerMove(String name, char move)
 }
 
 public static void main(String[] args) {
-
-       /* Scanner sc = new Scanner(System.in);
-        String ans = sc.nextLine();
-        int i = Integer.parseInt(ans);
-        System.out.println(doubled(i));
-}
-	*/
 
 	Game game = new Game();
 	Scanner in = new Scanner(System.in);	
@@ -122,16 +115,14 @@ public static void main(String[] args) {
 	System.out.print("Player 2 = " + player2.name );
 
 	System.out.println();
-	game.PrintBoard();
-	//int count = 0;
+	game.PrintBoard(tic);
 
 	while(counter <= 8)
 	{
 		if(counter % 2 == 0)
 		{
 			game.PlayerMove(player1.name, player1.move);
-			//count++;
-			if(game.Winner(player1.move))
+			if(game.Winner(tic, player1.move))
 			{
 				return;
 			}
@@ -139,8 +130,7 @@ public static void main(String[] args) {
 		else
 		{
 			game.PlayerMove(player2.name, player2.move);
-			//count++;
-			if(game.Winner(player2.move))
+			if(game.Winner(tic, player2.move))
 			{
 				return;
 			}

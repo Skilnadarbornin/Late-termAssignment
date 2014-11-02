@@ -4,7 +4,7 @@ apply plugin: 'application'
 
 jar {
     manifest {
-   	attributes 'Main-Class': 'is.ru.tictactoe.GameWeb'
+   	attributes 'Main-Class': 'is.ru.tictactoe.Game'
     }
 }
 // In this section you declare where to find the dependencies of your project
@@ -35,7 +35,7 @@ dependencies {
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 }
 
-mainClassName = "is.ru.tictactoe.GameWeb"
+mainClassName = "is.ru.tictactoe.Game"
 
 task selenium(type: Test, dependsOn: installApp) {
     testClassesDir = sourceSets.selenium.output.classesDir
