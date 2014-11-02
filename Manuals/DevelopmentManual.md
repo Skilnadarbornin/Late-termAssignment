@@ -7,7 +7,7 @@
 
 ### Requirements
 
-Java JDK installed and accessible in the PATH
+Java JDK installed
 
 ### Create project
 
@@ -21,7 +21,6 @@ Java JDK installed and accessible in the PATH
 
 	* build.gradle (The gradle build file that we use)
 	* gradlew (Folder containing the gradle wrapper)
-	* Procfile
 	* settings.gradle (Settings file for gradle, can contain definitions for multiple projects) 
 	* system.properties
 	* build
