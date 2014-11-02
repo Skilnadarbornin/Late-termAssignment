@@ -28,9 +28,10 @@ public class GameWeb implements SparkApplication {
         post(new Route("/Move"){
             @Override
             public Object handle(Request request, Response response){
-                Integer x = Integer.valueOf(request.queryParams("column"));
-                Integer y = Integer.valueOf(request.queryParams("row"));
-		
+               // Integer x = Integer.valueOf(request.queryParams("column"));
+               // Integer y = Integer.valueOf(request.queryParams("row"));
+		Integer x = 0;
+		Integer y = 1;
 		StringBuilder table = new StringBuilder();
                     table.append("<table class=\"table board table-bordered\" >\n" +
                             "                <tbody>\n" +
