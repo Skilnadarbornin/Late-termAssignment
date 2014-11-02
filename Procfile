@@ -1,1 +1,1 @@
-web: build/install/tictactoe/bin/tictactoe
+web: build/install/Late-termAssignment/bin/Late-termAssignment
