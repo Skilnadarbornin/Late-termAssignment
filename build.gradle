@@ -4,22 +4,17 @@ apply plugin: 'application'
 
 jar {
     manifest {
-        attributes 'Main-Class': 'is.ru.tictactoe.GameWeb'
+   	attributes 'Main-Class': 'is.ru.tictactoe.GameWeb'
     }
 }
-
-<<<<<<< HEAD
-mainClassName = "is.ru.tictactoe.GameWeb"
-
 // In this section you declare where to find the dependencies of your project
    repositories {
     // Use 'jcenter' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
-=======
+
 repositories{
 	jcenter()
->>>>>>> 1fb72ff2530d33877cbb8b9187948f2cbf9d89ff
 }
 
 sourceSets{ 
